@@ -1,2 +1,14 @@
-# Health Check
 GET http://localhost:8080/health
+
+###
+
+POST http://localhost:8080/log HTTP/1.1
+content-type: application/json
+
+{
+  "cpus": [
+    "big boy",
+    "Tommy"
+  ],
+  "crafts": []
+}
