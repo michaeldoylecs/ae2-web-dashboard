@@ -1,16 +1,19 @@
 -- Blank file for test
 local event = require("event")
-local network = require("network")
+local network = require("Network")
 
 local function sendStatsToServer()
-  network.serverPOST({
+  network.serverPOST("log", {
     data="Test Message",
-  }, "log")
+  })
 end
 
-event.timer(15, sendStatsToServer, math.huge)
+local eventId = event.timer(15, sendStatsToServer, math.huge)
 
 -- Loop until interrupted
 while true do
-  if event.poll() == "interrupted" then break; end;
+  if event.pull() == "interrupted" then
+    event.cancel(eventId)
+    break
+  end
 end
