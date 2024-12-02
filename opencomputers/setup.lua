@@ -5,6 +5,7 @@ local args = {...}
 local branch
 local repo
 local scripts = {
+    'env.lua.example',
     'Run.lua',
     'lib/json.lua',
     'src/Network.lua',
