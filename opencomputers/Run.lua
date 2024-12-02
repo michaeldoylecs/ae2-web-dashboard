@@ -1,6 +1,6 @@
 -- Blank file for test
 local event = require("event")
-local network = require("src/network")
+local network = require("network")
 
 local function sendStatsToServer()
   network.serverPOST({

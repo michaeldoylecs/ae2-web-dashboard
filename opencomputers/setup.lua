@@ -6,9 +6,9 @@ local branch
 local repo
 local scripts = {
     'env.lua.example',
+    'json.lua',
+    'Network.lua',
     'Run.lua',
-    'lib/json.lua',
-    'src/Network.lua',
 }
 
 -- BRANCH
