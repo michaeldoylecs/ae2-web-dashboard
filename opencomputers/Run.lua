@@ -12,6 +12,7 @@ local event = require("event")
 local network = require("Network")
 
 local function sendStatsToServer()
+  print("Sending data.")
   network.serverPOST("log", {
     data="Test Message",
   })
